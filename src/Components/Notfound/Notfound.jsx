@@ -9,7 +9,7 @@ export default function Notfound() {
     }, [])
     
   return <>
-    <h1>Notfound</h1>
+    <h1>Notfoundd</h1>
     </>
 }
 
