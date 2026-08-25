@@ -14,7 +14,7 @@ export default function RecentProducts() {
 
  async function addProduct(productId){
   let response= await addToCart(productId)
-  if(response.data.status==='success'){
+  if(response?.data?.status==='success'){
     console.log("Added");
     
     toast.success('Product added to cart successfully',{

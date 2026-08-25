@@ -58,9 +58,23 @@ function addToCart(productId){
 }
 
 
+function checkout(cartId,url,formValue){
+    return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${cartId}?url=${url}`,{
+        shippingAddress: formValue
+    },
+{  headers
+}
+
+).then((response)=>response
+)
+
+.catch((err)=>err)
+
+}
 
 
-     return <CartContext.Provider value={{addToCart, getCartProducts, removeCartItem, updateCartItem}}>
+
+     return <CartContext.Provider value={{addToCart, getCartProducts, removeCartItem, updateCartItem,checkout}}>
     
     {props.children}
         </CartContext.Provider>
